@@ -1,0 +1,53 @@
+#cardTable {
+  height: 300px;
+  background: #008000;
+  padding: 20px;
+  overflow: hidden;
+}
+#deck {
+  position: relative;
+  -webkit-perspective: 800px;
+  width: 100px;
+  height: 145px;
+}
+#deck .card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transition: all linear 0.1s;
+  -moz-transition: all linear 0.1s;
+  transition: all linear 0.1s;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+#deck .card img {
+  height: 100%;
+  width: 100%;
+}
+#deck .card figure {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: #fff;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  padding: 4px 2px;
+  -webkit-box-shadow: #111 0 0 2px;
+  -moz-box-shadow: #111 0 0 2px;
+  box-shadow: #111 0 0 2px;
+}
+#deck .card figure.back {
+  background: #777;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}

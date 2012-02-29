@@ -1,0 +1,148 @@
+html,
+body {
+  height: 100%;
+  background: #e8e8e8;
+  overflow: hidden;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Helvetica;
+}
+#container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+}
+#inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  padding-top: 10px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+}
+#code {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  width: 650px;
+  background: #272822;
+  border-left: 1px solid #000;
+  margin-left: 10px;
+  font-size: 1.2em;
+  overflow: scroll;
+}
+#code h2 {
+  color: #ddd;
+  margin: 0 0 5px 0;
+  padding: 10px 10px 3px 10px;
+  min-height: 30px;
+  font-size: 0.9em;
+  border-bottom: 1px solid #ddd;
+}
+#items {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  overflow: hidden;
+  position: relative;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+}
+#items > section {
+  background: #d8d8d8;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-size: 2em;
+}
+#items > section > * {
+  margin: 15px;
+}
+#items > section > * {
+  margin-left: 20px;
+}
+#items > section h1 {
+  text-align: center;
+  font-size: 2em;
+  margin: 0 35px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+#items > section h2 {
+  margin: 20px;
+  font-size: 1.3em;
+}
+#items > section ul {
+  line-height: 1.6em;
+}
+#items > section p.source {
+  margin-top: 40px;
+}
+#items > section a {
+  color: #272822;
+  text-decoration: none;
+  border-bottom: 1px dashed #272822;
+}
+#items > section a:visited {
+  color: #272822;
+}
+#items > section textarea {
+  width: 400px;
+  height: 200px;
+  font-size: 1em;
+  font-family: monospace;
+}
+#sandbox {
+  max-width: none;
+  margin: 10px auto;
+}
+#sandbox pre.output {
+  height: 50px;
+}
+.CodeMirror-scroll {
+  height: auto;
+  overflow: visible;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  background: #f00;
+  border: 1px solid #000;
+  margin: 0 5px 5px 0;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}

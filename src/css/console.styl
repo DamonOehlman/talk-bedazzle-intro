@@ -1,0 +1,150 @@
+@import 'nib'
+
+vcenter()
+    position absolute
+    left 0
+    right 0
+    top: 50%
+    transform translate(0, -50%)
+
+html, body {
+    height: 100%;
+    background: #e8e8e8;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Helvetica;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    box: vertical;
+}
+
+#inner {
+    box: horizontal;
+    padding-top: 10px;
+    box-flex: 1;
+}
+
+#code {
+    box: vertical;
+    width: 650px;
+    background: #272822;
+    border-left: 1px solid black;
+    margin-left: 10px;
+    font-size: 1.2em;
+    overflow: scroll;
+    
+    h2 {
+        color: #ddd;
+        margin: 0 0 5px 0;
+        padding: 10px 10px 3px 10px;
+        min-height: 30px;
+        font-size: 0.9em;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+#items {
+    box-flex: 1;
+    overflow: hidden;
+    position: relative;
+    
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    
+    & > section {
+        background: #d8d8d8;
+
+        transform: rotateY(180deg);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+
+        transition: all ease-in-out 0.5s;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: 8px;
+        backface-visibility: hidden;
+        
+        & > * {
+            margin: 15px;
+        }
+
+        font-size: 2em;
+        
+        & > * {
+            margin-left: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin: 0 35px;
+            vcenter()
+        }
+        
+        h2 {
+            margin: 20px;
+            font-size: 1.3em;
+        }
+        
+        ul {
+            line-height: 1.6em;
+        }
+        
+        p.source {
+            margin-top: 40px;
+        }
+        
+        a {
+            color: #272822;
+            text-decoration: none;
+            border-bottom: 1px dashed #272822;
+            
+            &:visited {
+                color: #272822;
+            }
+        }
+        
+        textarea {
+            width: 400px;
+            height: 200px;
+            font-size: 1em;
+            font-family: monospace;
+        }
+    }
+    
+    section.current {
+    }
+}
+
+#sandbox {
+    max-width: none;
+    margin: 10px auto;
+    
+    pre.output {
+        height: 50px;
+    }
+}
+
+// codemirror styles
+
+.CodeMirror-scroll {
+    height: auto; 
+    overflow: visible;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    background: red;
+    border: 1px solid black;
+    margin: 0 5px 5px 0;
+    
+    transition: all ease-in-out 0.5s;
+}

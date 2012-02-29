@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Basic Demo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="red" />
+<link rel="stylesheet" type="text/css" href="lib/codemirror.css" />
+<link rel="stylesheet" type="text/css" href="lib/codemirror.monokai.css" />
+<link rel="stylesheet" type="text/css" href="lib/console.css" />
+<link rel="stylesheet" type="text/css" href="css/console.css" />
+<link rel="stylesheet" type="text/css" href="css/cards.css" />
+<script src="lib/modernizr.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="inner">
+            <div id="items">
+                <section class="current"></section>
+            </div>
+            <div id="code">
+                <h2></h2>
+                <textarea></textarea>
+            </div>
+        </div>
+        <div id="sandbox">sandbox loading...</div>
+    </div>
+    <!-- The sandbox template -->
+    <script type="text/template" id="tplSandbox">
+    	<pre class="output"></pre>
+    	<div class="input">
+    		<textarea rows="1" placeholder="<%= placeholder %>"></textarea>
+    	</div>
+    </script>
+
+    <!-- The command/result template (NB whitespace/line breaks matter inside <pre> tag): -->
+    <script type="text/template" id="tplCommand"><% if (! _hidden) { %><span class="command"><%= command %></span>
+    <span class="prefix"><%= this.resultPrefix %></span><span class="<%= _class %>"><%= result %></span>
+    <% } %></script>
+    <script src="lib/keymaster.js"></script>
+    <script src="lib/codemirror.js"></script>
+    <script src="lib/console.js"></script>
+    <script src="lib/transform.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "name": "transform-console",
+    "description": "JS Sandbox demonstrating manipulation of CSS transforms",
+    "tags": ["css3", "transform"],
+    "author": "Damon Oehlman <damon.oehlman@sidelab.com>",
+    "version": "0.0.1",
+    "private": "true",
+    
+    "devDependencies": {
+        "interleave": "0.1.x",
+        "stylus": "*",
+        "nib": "*"
+    }
+}
