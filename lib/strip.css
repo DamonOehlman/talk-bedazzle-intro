@@ -1,0 +1,71 @@
+/* action bar */
+.xp-strip {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 100%;
+  background: #000;
+}
+.xp-strip a {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  color: #aaa;
+  font: bold 0.6em "Helvetica Neue", Helvetica;
+  margin: 2px 1px 1px;
+  padding: 2px 0;
+  min-width: 56px;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+.xp-strip a:active,
+.xp-strip a.active {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: rgba(153,153,153,0.30);
+  color: #fff;
+}
+.xp-strip a:active > strong::before,
+.xp-strip a.active > strong::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #666));
+  background: -webkit-linear-gradient(top, #fff 0%, #666 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #666 100%);
+  background: linear-gradient(top, #fff 0%, #666 100%);
+}
+.xp-strip a > strong {
+  -webkit-user-select: nont;
+  -moz-user-select: nont;
+  user-select: nont;
+  display: block;
+  text-align: center;
+}
+.xp-strip a > strong::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ccc), color-stop(1, #333));
+  background: -webkit-linear-gradient(top, #ccc 0%, #333 100%);
+  background: -moz-linear-gradient(top, #ccc 0%, #333 100%);
+  background: linear-gradient(top, #ccc 0%, #333 100%);
+  content: ' ';
+  display: block;
+  border: 0;
+  width: 28px;
+  height: 28px;
+  margin: 2px auto;
+  mask: 50% 50% url("data:image/png;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==") no-repeat;
+}
+

@@ -153,6 +153,15 @@ jQuery(document).ready(function($) {
             }
         }
     });
+    
+    $('nav a').click(function() {
+        var action = this.href.replace(/^.*\#(.*)$/, '$1'),
+            handler = demo[action];
+            
+        if (handler) {
+            handler.call(demo);
+        }
+    });
 });
 
 

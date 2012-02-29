@@ -11,8 +11,7 @@ html, body {
     height: 100%;
     background: #e8e8e8;
     overflow: hidden;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0;
     font-family: Helvetica;
 }
 
@@ -25,13 +24,13 @@ html, body {
 
 #inner {
     box: horizontal;
-    padding-top: 10px;
+    margin: 5px;
     box-flex: 1;
 }
 
 #code {
-    box: vertical;
-    width: 650px;
+    display: none;
+    width: 500px;
     background: #272822;
     border-left: 1px solid black;
     margin-left: 10px;
@@ -74,8 +73,6 @@ html, body {
             margin: 15px;
         }
 
-        font-size: 2em;
-        
         & > * {
             margin-left: 20px;
         }
@@ -89,11 +86,6 @@ html, body {
         
         h2 {
             margin: 20px;
-            font-size: 1.3em;
-        }
-        
-        ul {
-            line-height: 1.6em;
         }
         
         p.source {
@@ -111,8 +103,7 @@ html, body {
         }
         
         textarea {
-            width: 400px;
-            height: 200px;
+            width: 90%;
             font-size: 1em;
             font-family: monospace;
         }
@@ -124,7 +115,8 @@ html, body {
 
 #sandbox {
     max-width: none;
-    margin: 10px auto;
+    margin: 0px auto;
+    display: none;
     
     pre.output {
         height: 50px;
@@ -139,12 +131,45 @@ html, body {
 }
 
 .box {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
+    width: 20px;
+    height: 20px;
     background: red;
     border: 1px solid black;
-    margin: 0 5px 5px 0;
+    margin: 0 2px 2px 0;
     
     transition: all ease-in-out 0.5s;
+}
+
+.xp-strip a > strong::before {
+  width: 33px;
+  height: 33px;
+  margin: 2px auto;
+}
+
+a[href='#next'] > strong::before {
+    -webkit-mask-image: url(../img/right.png);
+}
+
+a[href='#run'] > strong::before {
+    -webkit-mask-image: url(../img/run.png);
+}
+
+a[href='#back'] > strong::before {
+    -webkit-mask-image: url(../img/left.png);
+}
+
+@media screen and (min-width: 600px) {
+    #code {
+        box: vertical;
+    }
+    
+    #items {
+        font-size: 2em;
+    }
+    
+    .box {
+        width: 50px;
+        height: 50px;
+        margin: 0 5px 5px 0;
+    }
 }

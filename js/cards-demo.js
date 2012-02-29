@@ -6,10 +6,12 @@ $('#deck').html(_.reduce(deck.cards, function(memo, card) {
 }, ''));
 
 $('#deck .card').click(function() {
+    var cardWidth = parseInt(stylar(this).get('width'), 10);
+    
     $('#deck').append(this);
 
     bedazzle(this)
-        .frame.ry(180).x(125).z(100)
-        .frame.ry(90).x(125)
-        .frame.ry(90).x(125).z(-100);
+        .frame.ry(180).x(cardWidth).z(100)
+        .frame.ry(90).x(cardWidth)
+        .frame.ry(90).x(cardWidth).z(-100);
 });
